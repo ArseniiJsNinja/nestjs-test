@@ -1,9 +1,6 @@
-name: Staging Pipeline
+name: Production Pipeline
 on: 
-  pull_request:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   test:
