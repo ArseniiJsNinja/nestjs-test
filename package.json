@@ -73,7 +73,7 @@
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "**.ts": [
+    "**.{ts,json}": [
       "npm run pretty",
       "git add"
     ]
