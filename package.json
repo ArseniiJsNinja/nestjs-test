@@ -19,7 +19,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepare": "husky install"
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@nestjs/common": "^7.6.15",
@@ -70,10 +70,17 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "lint-staged": {
-    "packages/**/*.{ts,json}": [
-      "prettier --ignore-path ./.prettierignore --write"
-    ],
-    "*.js": "eslint --cache --fix"
+    "*.{md,json}": "prettier --write",
+    "*.{ts}": [
+      "prettier --write",
+      "eslint"
+    ]
   }
 }
