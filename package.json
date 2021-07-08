@@ -73,10 +73,9 @@
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.ts": [
+    "**.ts": [
       "npm run pretty",
       "git add"
-    ],
-    "*.js": "eslint --cache --fix"
+    ]
   }
 }
