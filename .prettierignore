@@ -1,0 +1,6 @@
+/.github
+/dist
+/node_modules
+/coverage
+packages/**/*.d.ts
+packages/**/*.js
