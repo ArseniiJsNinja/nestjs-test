@@ -4,17 +4,11 @@ import { Injectable } from '@nestjs/common';
 export class TodoService {
   private readonly cats: any[] = [];
 
-                          create(cat: any) { 
-
-                            
+  create(cat: any) {
     this.cats.push(cat);
   }
 
-            findAll():             any[] {
-
- 
-
-
+  findAll(): any[] {
     return this.cats;
   }
 }
