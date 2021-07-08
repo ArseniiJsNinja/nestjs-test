@@ -8,7 +8,7 @@ export class TodoService {
     this.cats.push(cat);
   }
 
-  findAll(): any[] {
+            findAll(): any[] {
     return this.cats;
   }
 }
